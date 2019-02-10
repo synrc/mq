@@ -1,6 +1,12 @@
 EMQ XIO
 =======
 
+Install Erlang
+
+```
+$ brew install erlang
+```
+
 Install MAD
 
 ```
