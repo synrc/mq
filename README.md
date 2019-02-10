@@ -17,6 +17,8 @@ $ mad get xio/server && cd deps/server
 $ mad dep com pla rep
 ```
 
+Open admin panel: http://localhost:18083
+
 Credits
 =======
 
