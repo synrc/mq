@@ -37,7 +37,7 @@ Start http:management listener on 8080 successfully.
 Start http:dashboard listener on 18083 successfully.
 ```
 
-Open admin panel: http://localhost:18083
+Open admin panel: [http://localhost:18083](http://localhost:18083)
 
 Credits
 =======
