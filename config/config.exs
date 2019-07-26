@@ -9,7 +9,7 @@ config :emqx,
   expand_plugins_dir: 'plugins/',
   plugins_etc_dir: 'etc/plugins/',
   zones: [
-    {:external,
+    {:internal,
      [
        {:use_username_as_clientid, false},
        {:upgrade_qos, false},
@@ -29,11 +29,12 @@ config :emqx,
        {:force_gc_policy, %{:bytes => 1_048_576, :count => 1000}},
        {:enable_stats, true},
        {:enable_ban, true},
-       {:enable_acl, true},
+       {:enable_acl, false},
        {:await_rel_timeout, 300_000},
+       {:allow_anonymous, true},
        {:acl_deny_action, :ignore}
      ]},
-    {:internal,
+    {:external,
      [
        {:use_username_as_clientid, false},
        {:upgrade_qos, false},
@@ -83,7 +84,8 @@ config :emqx_dashboard,
   default_user_passwd: 'public',
   default_user_username: 'admin',
   api_providers: [:emqx_management, :emqx_dashboard],
-  listeners: [{:http, 18083, [{:num_acceptors, 4}, {:max_connections, 512}]}]
+  listeners: [{:http, 18083, [{:num_acceptors, 4},
+                              {:max_connections, 64000}]}]
 
 config :emqx_management,
   max_row_limit: 10000,
