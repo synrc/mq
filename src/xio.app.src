@@ -1,0 +1,10 @@
+{application, xio,
+ [
+  {description, "XIO EMQ X 3.0 Elixir"},
+  {vsn, "0.7.0"},
+  {registered, []},
+  {applications, [kernel,stdlib]},
+  {mod, { xio, []}},
+  {env, []}
+ ]}.
+
