@@ -34,6 +34,8 @@ defmodule XIO.Mixfile do
 
   def deps() do
     [
+      {:kvs, "~> 6.7.6", override: true},
+      {:rocksdb, github: "enterprizing/rocksdb", override: true},
       {:emqx, github: "xio/emqx", override: true},
       {:emqx_dashboard, github: "xio/emqx-dashboard"},
       {:emqx_management, github: "xio/emqx-management", override: true},
