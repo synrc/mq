@@ -65,32 +65,20 @@
     <section>
         <a name=js><h3>EMQ X 3.0</h3></a>
 
-        <p>Install Erlang (Mac).</p>
+        <p>Install Elixir (Mac).</p>
 
         <figure>
         <code>
- $ brew install erlang
+ $ brew install elixir
        </code>
         </figure>
 
-        <p>Install MAD.</p>
+       <p>Compile XIO</p>
 
         <figure>
         <code>
- $ curl -fsSL \
-   https://git.io/fpYm4 \
-   > mad && chmod +x mad \
-   && sudo cp mad /usr/local/bin
-        </code>
-        </figure>
-
-       <p>Install XIO.</p>
-
-        <figure>
-        <code>
- $ mad get xio/server
- $ cd deps/server
- $ mad dep com pla rep
+ $ mix deps.get
+ $ mix compile
         </code>
         </figure>
 
@@ -98,52 +86,63 @@
 
         <figure>
         <code>
+ $ MIX_ENV=prod iex -S mix
+ Erlang/OTP 22 [erts-10.4.3] [source] [64-bit] [smp:4:4]
+               [ds:4:4:10] [async-threads:1] [hipe] [dtrace]
+
  Starting emqx on node nonode@nohost
- Start mqtt:tcp listener on 127.0.0.1:11883 successfully.
- Start mqtt:tcp listener on 0.0.0.0:1883 successfully.
  Start mqtt:ws listener on 0.0.0.0:8083 successfully.
- Start mqtt:ssl listener on 0.0.0.0:8883 successfully.
- Start mqtt:wss listener on 0.0.0.0:8084 successfully.
- EMQ X Broker git is running now!
+ EMQ X Broker 0.0.0+build.1.ref2cbfb2b is running now!
  Start http:management listener on 8080 successfully.
  Start http:dashboard listener on 18083 successfully.
+ Interactive Elixir (1.9.0) - press Ctrl+C to exit (type h() ENTER for help)
+ iex(1)>
        </code>
         </figure>
 
         <figure>
         <code>
- > application:which_applications().
- [{kvs,"KVS Abstract Chain Storage","5.11"},
-  {emqx_dashboard,"EMQ X Dashboard","3.0"},
-  {emqx_management,"EMQ X Management API and CLI","3.0"},
-  {minirest,"MINI REST for COWBOY and JSX","git"},
-  {emqx,"EMQ X Broker","git"},
-  {cowboy,"COWBOY Small, fast, modern HTTP server.","2.5.0"},
-  {ssl_verify_fun,[],"1.1.4"},
-  {gen_rpc,"RPC library for BEAM languages","git"},
-  {esockd,"ESOCKD Non-blocking TCP/SSL Server","5.4.4"},
-  {ranch,"RANCH Socket TCP protocols.","1.6.2"},
-  {ssl,"Erlang/OTP SSL application","9.1.2"},
-  {lager,"Erlang logging framework","3.2.2"},
-  {public_key,"Public key infrastructure","1.6.4"},
-  {goldrush,"Erlang event stream processor","0.1.9"},
-  {ekka,"Autocluster and Autoheal for EMQ X Broker","0.5.3"},
-  {cowlib,"COWLIB Web protocols.","2.6.0"},
-  {crypto,"CRYPTO","4.4"},
-  {jsx,"JSX JSON parsing toolkit","2.9.0"},
-  {mnesia,"MNESIA  CXC 138 12","4.15.5"},
-  {syntax_tools,"Syntax tools","2.1.6"},
-  {compiler,"ERTS  CXC 138 10","7.3.1"},
-  {asn1,"The Erlang ASN1 compiler version 5.0.8","5.0.8"},
-  {clique,"A CLI library for erlang","git"},
-  {replayq,"A Disk Queue for Log Replay in Erlang","0.1.1"},
-  {neotoma,"PEG parser-generator.","1.7.4"},
-  {gproc,"GPROC Process Registry","0.10"},
-  {getopt,"Command-line options parser for Erlang","0.8.2"},
-  {cuttlefish,"cuttlefish configuration abstraction","git"},
-  {inets,"INETS  CXC 138 49","7.0.4"},
-  {stdlib,"ERTS  CXC 138 10","3.7"},
-  {kernel,"ERTS  CXC 138 10","6.2"}]
+> :application.which_applications
+[
+  {:xio, 'XIO EMQ X 3.0 Elixir', '0.7.0'},
+  {:emqx_dashboard, 'EMQ X Dashboard', '3.0'},
+  {:emqx_management, 'EMQ X Management API and CLI', '3.0'},
+  {:clique, 'A CLI library for erlang', '0.0.0+build.1.ref063ba94'},
+  {:minirest, 'MINI REST for COWBOY and JSX', '0.1.0+build.45.ref61953ad'},
+  {:emqx, 'EMQ X Broker', '0.0.0+build.1.ref2cbfb2b'},
+  {:lager, 'Erlang logging framework', '3.2.2'},
+  {:goldrush, 'Erlang event stream processor', '0.1.9'},
+  {:syntax_tools, 'Syntax tools', '2.2'},
+  {:ssl_verify_fun, [], '1.1.4'},
+  {:getopt, 'Command-line options parser for Erlang', '0.8.2'},
+  {:ekka, 'Autocluster and Autoheal for EMQ X Broker', '0.5.3'},
+  {:mnesia, 'MNESIA  CXC 138 12', '4.16'},
+  {:neotoma, 'PEG parser-generator.', '1.7.4'},
+  {:replayq, 'A Disk Queue for Log Replay in Erlang', '0.1.1'},
+  {:cowboy, 'COWBOY Small, fast, modern HTTP server.', '2.5.0'},
+  {:ranch, 'RANCH Socket TCP protocols.', '1.6.2'},
+  {:cowlib, 'COWLIB Web protocols.', '2.6.0'},
+  {:esockd, 'ESOCKD Non-blocking TCP/SSL Server', '5.4.4'},
+  {:gen_rpc, 'RPC library for BEAM languages', '0.0.0+build.1.ref537ac86'},
+  {:jsx, 'JSX JSON parsing toolkit', '2.9.0'},
+  {:cuttlefish, 'cuttlefish configuration abstraction',
+   '2.0.11+build.547.refef77856'},
+  {:kvs, 'KVS Abstract Chain Database', '6.7.7'},
+  {:gproc, 'Extended process registry for Erlang', '0.8.0'},
+  {:rocksdb, 'ROCKSDB STUB', '0.6.0'},
+  {:hex, 'hex', '0.20.1'},
+  {:inets, 'INETS  CXC 138 49', '7.0.8'},
+  {:ssl, 'Erlang/OTP SSL application', '9.3.3'},
+  {:public_key, 'Public key infrastructure', '1.6.7'},
+  {:asn1, 'The Erlang ASN1 compiler version 5.0.9', '5.0.9'},
+  {:crypto, 'CRYPTO', '4.5.1'},
+  {:mix, 'mix', '1.9.0'},
+  {:iex, 'iex', '1.9.0'},
+  {:elixir, 'elixir', '1.9.0'},
+  {:compiler, 'ERTS  CXC 138 10', '7.4.2'},
+  {:stdlib, 'ERTS  CXC 138 10', '3.9.2'},
+  {:kernel, 'ERTS  CXC 138 10', '6.4.1'}
+]
        </code>
         </figure>
 
