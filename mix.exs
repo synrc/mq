@@ -23,12 +23,38 @@ defmodule XIO.Mixfile do
   end
 
   def application() do
-    [ mod: {:xio, []},
-      application: [:inets,:mnesia,:cuttlefish,:getopt,:gproc,:neotoma,:replayq,
-                    :clique,:asn1,:compiler,:syntax_tools,:jsx,:crypto,:cowlib,
-                    :ekka,:goldrush,:public_key,:lager,:ssl,:ranch,:esockd,
-                    :gen_rpc,:ssl_verify_fun,:cowboy,:emqx,:minirest,
-                    :emqx_management,:emqx_dashboard]
+    [
+      mod: {:xio, []},
+      application: [
+        :inets,
+        :mnesia,
+        :cuttlefish,
+        :getopt,
+        :gproc,
+        :neotoma,
+        :replayq,
+        :clique,
+        :asn1,
+        :compiler,
+        :syntax_tools,
+        :jsx,
+        :crypto,
+        :cowlib,
+        :ekka,
+        :goldrush,
+        :public_key,
+        :lager,
+        :ssl,
+        :ranch,
+        :esockd,
+        :gen_rpc,
+        :ssl_verify_fun,
+        :cowboy,
+        :emqx,
+        :minirest,
+        :emqx_management,
+        :emqx_dashboard
+      ]
     ]
   end
 
@@ -39,7 +65,8 @@ defmodule XIO.Mixfile do
       {:emqx, github: "xio/emqx", override: true},
       {:emqx_dashboard, github: "xio/emqx-dashboard"},
       {:emqx_management, github: "xio/emqx-management", override: true},
-      {:cuttlefish, github: "xio/cuttlefish", branch: "develop", override: true},
+      {:cuttlefish,
+       github: "xio/cuttlefish", branch: "develop", override: true},
       {:gproc, "~> 0.8.0", override: true},
       {:ex_doc, "~> 0.11", only: :dev}
     ]
