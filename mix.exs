@@ -25,6 +25,7 @@ defmodule XIO.Mixfile do
   def application() do
     [
       mod: {:xio, []},
+      extra_applications: [:os_mon], # for mix release
       application: [
         :inets,
         :mnesia,
@@ -51,6 +52,7 @@ defmodule XIO.Mixfile do
         :ssl_verify_fun,
         :cowboy,
         :emqx,
+        :os_mon,
         :minirest,
         :emqx_management,
         :emqx_dashboard

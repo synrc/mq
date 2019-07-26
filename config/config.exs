@@ -81,6 +81,7 @@ config :emqx,
   ]
 
 config :emqx_dashboard,
+  primary_log_level: :info,
   default_user_passwd: 'public',
   default_user_username: 'admin',
   api_providers: [:emqx_management, :emqx_dashboard],
