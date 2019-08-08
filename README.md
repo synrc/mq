@@ -38,6 +38,7 @@ Start http:dashboard listener on 18083 successfully.
 ```
 
 Open admin panel: [http://localhost:18083](http://localhost:18083)
+Login/Pass: admin/public
 
 Credits
 =======
