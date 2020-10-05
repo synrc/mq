@@ -43,4 +43,5 @@ Login/Pass: admin/public
 Credits
 =======
 
-* Maxim Sokhatsky
+* Maksym Sokhatsky
+* Andrii Zadorozhnii
