@@ -62,11 +62,11 @@ defmodule XIO.Mixfile do
 
   def deps() do
     [
-      {:kvs, "~> 6.7.6", override: true},
+      {:kvs, "~> 7.9.1", override: true},
       {:rocksdb, github: "enterprizing/rocksdb"},
-      {:emqx, github: "xio/emqx", override: true},
-      {:emqx_dashboard, github: "xio/emqx-dashboard"},
-      {:emqx_management, github: "xio/emqx-management", override: true},
+      {:emqx, github: "xio/emqx", ref: "v4.2", override: true},
+      {:emqx_dashboard, github: "xio/emqx-dashboard", ref: "v4.2"},
+      {:emqx_management, github: "xio/emqx-management", ref: "v4.2", override: true},
       {:cuttlefish,
        github: "xio/cuttlefish", branch: "develop", override: true},
       {:gproc, "~> 0.8.0", override: true},
