@@ -64,12 +64,12 @@ defmodule XIO.Mixfile do
     [
       {:kvs, "~> 7.9.1", override: true},
       {:rocksdb, github: "enterprizing/rocksdb"},
-      {:minirest, github: "xio/minirest", ref: "emqx30", override: true},
+      {:minirest, github: "xio/minirest", ref: "emqx42", override: true},
+      {:cuttlefish, github: "xio/cuttlefish", branch: "develop", override: true},
+      {:clique, github: "xio/clique", branch: "master", override: true},
       {:emqx, github: "xio/emqx", ref: "v4.2", override: true},
-      {:emqx_dashboard, github: "xio/emqx-dashboard", ref: "v4.2"},
+      {:emqx_dashboard,  github: "xio/emqx-dashboard", ref: "v4.2", override: true},
       {:emqx_management, github: "xio/emqx-management", ref: "v4.2", override: true},
-      {:cuttlefish,
-       github: "xio/cuttlefish", branch: "develop", override: true},
       {:gproc, "~> 0.8.0", override: true},
       {:ex_doc, "~> 0.11", only: :dev}
     ]
