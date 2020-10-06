@@ -4,3 +4,5 @@ ebin/
 .applist
 **/Mnesia*/**
 *.beam
+mix.lock
+_build/
