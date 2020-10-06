@@ -64,6 +64,7 @@ defmodule XIO.Mixfile do
     [
       {:kvs, "~> 7.9.1", override: true},
       {:rocksdb, github: "enterprizing/rocksdb"},
+      {:minirest, github: "xio/minirest", ref: "emqx30", override: true},
       {:emqx, github: "xio/emqx", ref: "v4.2", override: true},
       {:emqx_dashboard, github: "xio/emqx-dashboard", ref: "v4.2"},
       {:emqx_management, github: "xio/emqx-management", ref: "v4.2", override: true},
