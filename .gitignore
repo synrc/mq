@@ -6,3 +6,4 @@ ebin/
 *.beam
 mix.lock
 _build/
+log/
