@@ -1,5 +1,5 @@
-EMQ XIO
-=======
+INFOTECH SE MQ
+==============
 
 Install Erlang
 
