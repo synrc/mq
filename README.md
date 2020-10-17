@@ -1,6 +1,6 @@
-INFOTECH SE MQ
-==============
-[![Build Status](https://travis-ci.com/synrc/kvs.svg?branch=master)](https://travis-ci.com/synrc/kvs)
+ERP.UNO MQ
+==========
+[![Build Status](https://travis-ci.com/erpuno/mq.svg?branch=master)](https://travis-ci.com/erpuno/mq)
 
 Install Erlang
 
