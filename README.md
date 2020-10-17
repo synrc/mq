@@ -1,5 +1,6 @@
 INFOTECH SE MQ
 ==============
+[![Build Status](https://travis-ci.com/synrc/kvs.svg?branch=master)](https://travis-ci.com/synrc/kvs)
 
 Install Erlang
 
