@@ -29,8 +29,6 @@ defmodule XIO.Mixfile do
       application: [
         :inets,
         :mnesia,
-        :cuttlefish,
-        :getopt,
         :gproc,
         :neotoma,
         :replayq,
@@ -38,7 +36,6 @@ defmodule XIO.Mixfile do
         :asn1,
         :compiler,
         :syntax_tools,
-        :jsx,
         :crypto,
         :cowlib,
         :ekka,
@@ -54,7 +51,6 @@ defmodule XIO.Mixfile do
         :emqx,
         :os_mon,
         :minirest,
-        :emqx_management,
         :emqx_dashboard
       ]
     ]
@@ -62,14 +58,12 @@ defmodule XIO.Mixfile do
 
   def deps() do
     [
-      {:kvs, "~> 6.7.6", override: true},
-      {:rocksdb, github: "enterprizing/rocksdb"},
-      {:emqx, github: "xio/emqx", override: true},
-      {:emqx_dashboard, github: "xio/emqx-dashboard"},
-      {:emqx_management, github: "xio/emqx-management", override: true},
-      {:cuttlefish,
-       github: "xio/cuttlefish", branch: "develop", override: true},
-      {:gproc, "~> 0.8.0", override: true},
+      {:kvs, "~> 7.11.5", override: true},
+      {:ranch, "~> 1.7.1", override: true},
+      {:cowboy, "~> 2.8.0", override: true},
+      {:cowlib, "~> 2.9.0", override: true},
+      {:emqx, github: "xio/emqx", ref: "master"},
+      {:emqx_dashboard, github: "xio/emqx-dashboard", ref: "erp.uno"},
       {:ex_doc, "~> 0.11", only: :dev}
     ]
   end
