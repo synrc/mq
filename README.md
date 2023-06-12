@@ -1,5 +1,5 @@
-SYNRC MQ
-========
+SYNRC 📟 MQ
+===========
 
 Install Erlang
 
