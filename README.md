@@ -40,5 +40,5 @@ Login/Pass: admin/public
 Credits
 =======
 
-* Maksym Sokhatsky
-* Andrii Zadorozhnii
+* Namdak Tonpa
+
