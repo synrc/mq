@@ -1,5 +1,5 @@
-ERP.UNO MQ
-==========
+SYNRC MQ
+========
 [![Build Status](https://travis-ci.com/erpuno/mq.svg?branch=master)](https://travis-ci.com/erpuno/mq)
 
 Install Erlang
