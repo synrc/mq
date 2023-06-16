@@ -1,7 +1,0 @@
-+Q 1024000
-+P 2048000
-+A 32
--setcookie emqxsecretcookie
--proto_dist inet_tcp
--name emqx@127.0.0.1
-+zdbbl 8192
