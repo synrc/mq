@@ -1,27 +1,23 @@
-ERP.UNO MQ
-==========
-[![Build Status](https://travis-ci.com/erpuno/mq.svg?branch=master)](https://travis-ci.com/erpuno/mq)
+SYNRC 📟 MQ
+===========
 
-Install Erlang
+Features
+--------
 
-```
-$ brew install erlang
-```
+* Erlang/OTP
+* MQTT protocol 5.0
+* TCP/TLS/WebSocket/WSS/MQTT/MQTTS
 
-Install MAD
+Install
+-------
 
-```
-$ curl -fsSL \
-   https://git.io/fpYm4 \
-   > mad && chmod +x mad \
-   && sudo cp mad /usr/local/bin
-```
-
-Install XIO Server
+Here is example how to install SYNRC MQ server from macOS:
 
 ```
-$ mad get xio/server && cd deps/server
-$ mad dep com pla rep
+$ brew install erlang elixir
+$ git clone git@github.com:synrc/mq && cd mq
+$ mix deps.get
+$ iex -S mix
 ```
 
 Example of success:
@@ -44,5 +40,5 @@ Login/Pass: admin/public
 Credits
 =======
 
-* Maksym Sokhatsky
-* Andrii Zadorozhnii
+* Namdak Tonpa
+

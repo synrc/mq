@@ -63,7 +63,7 @@ defmodule XIO.Mixfile do
       {:cowboy, "~> 2.8.0", override: true},
       {:cowlib, "~> 2.9.0", override: true},
       {:emqx, github: "xio/emqx", ref: "master"},
-      {:emqx_dashboard, github: "xio/emqx-dashboard", ref: "erp.uno"},
+      {:emqx_dashboard, github: "xio/emqx-dashboard", ref: "master"},
       {:ex_doc, "~> 0.11", only: :dev}
     ]
   end
