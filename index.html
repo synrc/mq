@@ -14,16 +14,15 @@
     <article>
         <section>
             <h3>SYNOPSIS</h3>
-            <div>MQTT server is a heart of infrastructure and SYNRC products are
-                 compatible with the following MQTT servers: EMQX, NanoMQ, Mosquitto.
-                 Here you may find information how to set up those.
+            <div>SYNRC MQTT server (MQ) is a heart of SOA infrastructure and SYNRC products.
             </div>
         </section>
         <section>
-            <h3>SERVERS</h3>
-            <div><ul><li><a href="man/mosquitto.htm">MOSQUITTO</a></li>
-                     <li><a href="man/nanomq.htm">NANOMQ</a></li>
-                     <li><a href="man/emqx.htm">EMQX</a></li></ul></div>
+            <h3>FEATURES</h3>
+            <div><ul><li>C99</li>
+                     <li>UDP/TCP</li>
+                     <li>mbedTLS</li>
+                     <li>QUIC</li></ul></div>
             <br />
             <div>
                 JUN 2023 © 5HT ISC | VER 1.0
@@ -33,31 +32,40 @@
         </section>
     </article>
 </aside><main>
+
     <section>
-        <a name="js"></a><h3>MOSQUITTO</h3>
+        <a name="js"></a><h3>SMQ</h3>
+
+        <p>Install Prerequisites.</p>
+
         <figure>
         <code>
- $ sudo apt install mosquitto mosquitto-clients
+ $ sudo apt install libuv1-dev libmbedtls-dev
        </code>
         </figure>
-    </section>
-    <section>
-        <a name="js"></a><h3>NANOMQ</h3>
+
+       <p>Compile SMQ.</p>
+
         <figure>
         <code>
- $ git clone git@github.com/emqx/nanomq
-       </code>
+ $ gcc -o mq mq.c -luv -lmbedtls -lmbedx509 -lmbedcrypto
+        </code>
         </figure>
-    </section>
-    <section>
-        <a name="js"></a><h3>EMQX</h3>
+
+        <p>Example of successfull run.</p>
+
         <figure>
         <code>
- $ git clone git@github.com/emqx/emqx
+ $ ./mq
+QUIC support requires msquic integration
+MQTT v5 server running on ports 1883 (TCP), 8883 (TLS), 14567 (UDP)
        </code>
         </figure>
+
+        <br /><br />
+
     </section>
 
 </main><footer>
-    Made with <span class="heart">❤</span> to EMQ
+    Made with <span class="heart">❤</span> to N2O
 </footer></body></html>
